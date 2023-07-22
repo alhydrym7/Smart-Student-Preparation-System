@@ -24,14 +24,6 @@ def convert_image_numpy_array(file, mode='RGB'):
         im = im.convert(mode)
     return np.array(im)
 def compare_faces(known_face_encodings, face_encoding_to_check, tolerance=0.6):
-    """
-    Compare a list of face encodings against a candidate encoding to see if they match.
-
-    :param known_face_encodings: A list of known face encodings
-    :param face_encoding_to_check: A single face encoding to compare against the list
-    :param tolerance: How much distance between faces to consider it a match. Lower is more strict. 0.6 is typical best performance.
-    :return: A list of True/False values indicating which known_face_encodings match the face encoding to check
-    """
     return list(euclidean_distance(known_face_encodings, face_encoding_to_check) <= tolerance)
 
 class FaceRecognitionGUI:
