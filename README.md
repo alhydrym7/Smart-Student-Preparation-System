@@ -1,4 +1,4 @@
-# Face Recognition Application with Real-time Face Detection
+# Smart Student Preparation System
 
 This repository contains a Python script for a face recognition application with real-time face detection using the YOLOv4 model. The application provides a graphical user interface (GUI) built using tkinter and utilizes the face_recognition library for face recognition tasks.
 
